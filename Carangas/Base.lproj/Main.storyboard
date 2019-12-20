@@ -47,7 +47,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FpI-Sy-Esc" kind="show" id="bIR-kt-5uk"/>
+                                    <segue destination="FpI-Sy-Esc" kind="show" identifier="viewSegue" id="bIR-kt-5uk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -218,18 +218,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f81-9G-euq">
+                                <rect key="frame" x="0.0" y="238" width="375" height="429"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="olP-RK-Jfv">
+                                <rect key="frame" x="169" y="420" width="37" height="37"/>
+                                <color key="color" name="main"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f81-9G-euq" firstAttribute="top" secondItem="M2w-Q0-H2V" secondAttribute="bottom" constant="30" id="3BR-GK-uhC"/>
                             <constraint firstItem="Hc8-xg-B67" firstAttribute="trailing" secondItem="h0W-xz-8b0" secondAttribute="trailing" constant="16" id="9Xd-oH-OSQ"/>
+                            <constraint firstItem="olP-RK-Jfv" firstAttribute="centerY" secondItem="f81-9G-euq" secondAttribute="centerY" id="A3T-Nl-pu0"/>
                             <constraint firstItem="M2w-Q0-H2V" firstAttribute="leading" secondItem="Hc8-xg-B67" secondAttribute="leading" constant="24" id="CRT-Gh-Xd2"/>
+                            <constraint firstItem="f81-9G-euq" firstAttribute="bottom" secondItem="Hc8-xg-B67" secondAttribute="bottom" id="FLU-u8-yBx"/>
                             <constraint firstItem="h0W-xz-8b0" firstAttribute="leading" secondItem="Hc8-xg-B67" secondAttribute="leading" constant="24" id="Iiw-0H-U6i"/>
                             <constraint firstItem="Hc8-xg-B67" firstAttribute="trailing" secondItem="n0h-oW-Exb" secondAttribute="trailing" constant="16" id="NzJ-0E-gpT"/>
                             <constraint firstItem="M2w-Q0-H2V" firstAttribute="top" secondItem="n0h-oW-Exb" secondAttribute="bottom" constant="4" id="Ym4-LP-k9K"/>
                             <constraint firstItem="Hc8-xg-B67" firstAttribute="trailing" secondItem="M2w-Q0-H2V" secondAttribute="trailing" constant="16" id="bzE-bn-GFn"/>
                             <constraint firstItem="n0h-oW-Exb" firstAttribute="top" secondItem="h0W-xz-8b0" secondAttribute="bottom" constant="4" id="m9D-Zw-cKa"/>
+                            <constraint firstItem="olP-RK-Jfv" firstAttribute="centerX" secondItem="nHr-UH-Z8r" secondAttribute="centerX" id="mOJ-Lx-TC6"/>
+                            <constraint firstItem="f81-9G-euq" firstAttribute="leading" secondItem="Hc8-xg-B67" secondAttribute="leading" id="ozq-IW-IPg"/>
+                            <constraint firstItem="olP-RK-Jfv" firstAttribute="centerX" secondItem="f81-9G-euq" secondAttribute="centerX" id="slO-nM-y1r"/>
                             <constraint firstItem="h0W-xz-8b0" firstAttribute="top" secondItem="Hc8-xg-B67" secondAttribute="top" constant="20" id="usU-Xg-Eur"/>
                             <constraint firstItem="n0h-oW-Exb" firstAttribute="leading" secondItem="Hc8-xg-B67" secondAttribute="leading" constant="24" id="xSR-kp-gCZ"/>
+                            <constraint firstItem="f81-9G-euq" firstAttribute="trailing" secondItem="Hc8-xg-B67" secondAttribute="trailing" id="ykD-XT-JoG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hc8-xg-B67"/>
                     </view>
@@ -244,11 +263,13 @@
                         <outlet property="lbBrand" destination="h0W-xz-8b0" id="kxf-UO-tZ5"/>
                         <outlet property="lbGasType" destination="n0h-oW-Exb" id="Vf0-jU-vUd"/>
                         <outlet property="lbPrice" destination="M2w-Q0-H2V" id="8V9-yK-eSK"/>
+                        <outlet property="loading" destination="olP-RK-Jfv" id="tb4-Q1-bsa"/>
+                        <outlet property="webView" destination="f81-9G-euq" id="RDJ-6g-7m4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUJ-h6-dXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="687"/>
+            <point key="canvasLocation" x="1293.5999999999999" y="686.80659670164926"/>
         </scene>
     </scenes>
     <resources>
@@ -257,6 +278,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Unn-qu-cRI"/>
+        <segue reference="kKk-qI-2Ya"/>
     </inferredMetricsTieBreakers>
 </document>

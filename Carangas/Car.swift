@@ -10,11 +10,11 @@ import Foundation
 
 class Car:  Codable{                   //API
     
-    var _id: String                 //"_id": "",
-    var brand: String               //"brand": "danilo - TESTE ",
-    var gasType: Int                //"gasType": 0,
-    var name: String                //   "name": "Danilo",
-    var price: Int                  //   "price": 200
+    var _id: String?                 //"_id": "",
+    var brand: String = ""               //"brand": "danilo - TESTE ",
+    var gasType: Int = 0               //"gasType": 0,
+    var name: String  = ""              //   "name": "Danilo",
+    var price: Double = 0.0                //   "price": 200
     
     
     var gas : String{
@@ -28,4 +28,7 @@ class Car:  Codable{                   //API
         }
     }
     
+}
+struct Brand: Codable {
+    let fipe_name: String
 }
